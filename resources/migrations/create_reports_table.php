@@ -4,8 +4,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Class CreateReportsTable.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class CreateReportsTable extends Migration
 {
+    /**
+     *
+     */
     public function up()
     {
         Schema::create('reports', function (Blueprint $table) {
@@ -28,6 +36,9 @@ class CreateReportsTable extends Migration
         });
     }
 
+    /**
+     *
+     */
     public function down()
     {
         Schema::dropIfExists('reports');
