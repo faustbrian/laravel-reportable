@@ -2,7 +2,9 @@
 
 namespace BrianFaust\Reportable;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class ReportableServiceProvider extends ServiceProvider
 {
     public function boot()
     {

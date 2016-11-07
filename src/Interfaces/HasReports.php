@@ -1,10 +1,10 @@
 <?php
 
-namespace BrianFaust\Reportable\Contracts;
+namespace BrianFaust\Reportable\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface Reportable
+interface HasReports
 {
     public function reports();
 

@@ -2,10 +2,10 @@
 
 namespace BrianFaust\Reportable\Traits;
 
-use BrianFaust\Reportable\Models\Report;
+use BrianFaust\Reportable\Report;
 use Illuminate\Database\Eloquent\Model;
 
-trait Reportable
+trait HasReportsTrait
 {
     public function reports()
     {
