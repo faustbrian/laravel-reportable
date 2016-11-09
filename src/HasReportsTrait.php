@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Reportable\Traits;
+namespace BrianFaust\Reportable;
 
 use BrianFaust\Reportable\Report;
 use Illuminate\Database\Eloquent\Model;
