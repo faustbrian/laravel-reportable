@@ -23,6 +23,11 @@ declare(strict_types=1);
 namespace BrianFaust\Reportable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Report extends Model
 {
@@ -30,22 +35,22 @@ class Report extends Model
 
     protected $casts = ['meta' => 'array'];
 
-    public function reportable()
+    public function reportable(): MorphTo
     {
         return $this->morphTo();
     }
 
-    public function conclusion()
+    public function conclusion(): HasOne
     {
         return $this->hasOne(Conclusion::class);
     }
 
-    public function judge()
+    public function judge(): Model
     {
         return $this->conclusion->judge;
     }
 
-    public function conclude($data, Model $judge)
+    public function conclude($data, Model $judge): Conclusion
     {
         $conclusion = (new Conclusion())->fill(array_merge($data, [
             'judge_id'   => $judge->id,
@@ -57,7 +62,7 @@ class Report extends Model
         return $conclusion;
     }
 
-    public static function allJudges()
+    public static function allJudges(): array
     {
         $judges = [];
 

@@ -23,6 +23,11 @@ declare(strict_types=1);
 namespace BrianFaust\Reportable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Conclusion extends Model
 {
@@ -32,12 +37,12 @@ class Conclusion extends Model
 
     protected $casts = ['meta' => 'array'];
 
-    public function conclusion()
+    public function conclusion(): BelongsTo
     {
         return $this->belongsTo(Report::class);
     }
 
-    public function judge()
+    public function judge(): MorphTo
     {
         return $this->morphTo();
     }

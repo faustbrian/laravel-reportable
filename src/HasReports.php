@@ -23,15 +23,20 @@ declare(strict_types=1);
 namespace BrianFaust\Reportable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasReports
 {
-    public function reports()
+    public function reports(): MorphMany
     {
         return $this->morphMany(Report::class, 'reportable');
     }
 
-    public function report($data, Model $reportable)
+    public function report($data, Model $reportable): Report
     {
         $report = (new Report())->fill(array_merge($data, [
             'reporter_id'   => $reportable->id,
