@@ -28,13 +28,12 @@ php artisan vendor:publish --provider="BrianFaust\Reportable\ReportableServicePr
 
 namespace App;
 
-use BrianFaust\Reportable\HasReportsTrait;
-use BrianFaust\Reportable\Interfaces\HasReports;
+use BrianFaust\Reportable\HasReports;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model implements HasReports
+class Post extends Model
 {
-    use HasReportsTrait;
+    use HasReports;
 }
 ```
 

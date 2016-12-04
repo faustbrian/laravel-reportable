@@ -24,7 +24,7 @@ namespace BrianFaust\Reportable;
 
 use Illuminate\Database\Eloquent\Model;
 
-trait HasReportsTrait
+trait HasReports
 {
     public function reports()
     {
