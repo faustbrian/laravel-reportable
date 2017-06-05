@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Reportable.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Reportable;
+namespace BrianFaust\Reportable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -42,7 +39,7 @@ class Report extends Model
     public function conclude($data, Model $judge): Conclusion
     {
         $conclusion = (new Conclusion())->fill(array_merge($data, [
-            'judge_id'   => $judge->id,
+            'judge_id' => $judge->id,
             'judge_type' => get_class($judge),
         ]));
 

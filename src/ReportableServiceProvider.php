@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Reportable.
  *
@@ -14,17 +11,14 @@ declare(strict_types=1);
 
 namespace BrianFaust\Reportable;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class ReportableServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function boot()
     {
-        $this->publishMigrations();
-    }
-
-    public function getPackageName(): string
-    {
-        return 'reportable';
+        $this->publishes([
+            __DIR__.'/../database/migrations' => database_path('migrations'),
+        ], 'migrations');
     }
 }
