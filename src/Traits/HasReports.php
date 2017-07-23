@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Reportable\Traits;
 
-use BrianFaust\Reportable\Models\Report;
 use Illuminate\Database\Eloquent\Model;
+use BrianFaust\Reportable\Models\Report;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasReports
