@@ -41,7 +41,7 @@ class Report extends Model
     public function conclude($data, Model $judge): Conclusion
     {
         $conclusion = (new Conclusion())->fill(array_merge($data, [
-            'judge_id' => $judge->id,
+            'judge_id'   => $judge->id,
             'judge_type' => get_class($judge),
         ]));
 
