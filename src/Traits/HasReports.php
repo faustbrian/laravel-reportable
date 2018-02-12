@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Reportable\Traits;
 
-use Illuminate\Database\Eloquent\Model;
 use BrianFaust\Reportable\Models\Report;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasReports
@@ -27,7 +27,7 @@ trait HasReports
     public function report($data, Model $reportable): Report
     {
         $report = (new Report())->fill(array_merge($data, [
-            'reporter_id' => $reportable->id,
+            'reporter_id'   => $reportable->id,
             'reporter_type' => get_class($reportable),
         ]));
 
