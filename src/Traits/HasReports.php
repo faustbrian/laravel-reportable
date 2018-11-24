@@ -24,11 +24,11 @@ trait HasReports
         return $this->morphMany(Report::class, 'reportable');
     }
 
-    public function report($data, Model $reportable): Report
+    public function report($data, Model $reporter): Report
     {
         $report = (new Report())->fill(array_merge($data, [
-            'reporter_id'   => $reportable->id,
-            'reporter_type' => get_class($reportable),
+            'reporter_id'   => $reporter->id,
+            'reporter_type' => get_class($reporter),
         ]));
 
         $this->reports()->save($report);
