@@ -41,7 +41,7 @@ class Post extends Model
 #### The User Model reports the Post Model
 ``` php
 $post->report([
-    'reason' => str_random(10),
+    'reason' => \Str::random(10),
     'meta' => ['some more optional data, can be notes or something'],
 ], $user);
 ```
