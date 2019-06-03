@@ -27,6 +27,11 @@ class Report extends Model
     {
         return $this->morphTo();
     }
+    
+    public function reporter()
+    {
+        return $this->hasOne(User::class, 'id', 'reporter_id');
+    }
 
     public function conclusion(): HasOne
     {
