@@ -23,7 +23,7 @@ class ReportableServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../database/migrations' => database_path('migrations'),
+            __DIR__.'/../database/migrations/create_reports_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_reports_table.php'),
         ], 'migrations');
     }
 }
