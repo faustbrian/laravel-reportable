@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-reportable",
+    "name": "artisanry/reportable",
     "description": "reportable Polymorphic Eloquent Models for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-reportable", "Laravel Reportable", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-reportable", "Laravel Reportable"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Reportable\\": "src/"
+            "Artisanry\\Reportable\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Reportable\\": "tests"
+            "Artisanry\\Tests\\Reportable\\": "tests"
         }
     },
     "config": {
@@ -38,7 +38,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Reportable\\ReportableServiceProvider"
+                "Artisanry\\Reportable\\ReportableServiceProvider"
             ]
         }
     },

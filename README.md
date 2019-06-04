@@ -1,22 +1,22 @@
 # Laravel Reportable
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Reportable/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Reportable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-reportable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Reportable.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Reportable/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Reportable.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Reportable)
+[![Build Status](https://img.shields.io/travis/artisanry/Reportable/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Reportable)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/reportable.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Reportable.svg?style=flat-square)](https://github.com/artisanry/Reportable/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Reportable.svg?style=flat-square)](https://packagist.org/packages/artisanry/Reportable)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-reportable
+$ composer require artisanry/reportable
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
 
 ```
-php artisan vendor:publish --provider="BrianFaust\Reportable\ReportableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Artisanry\Reportable\ReportableServiceProvider" && php artisan migrate
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ php artisan vendor:publish --provider="BrianFaust\Reportable\ReportableServicePr
 
 namespace App;
 
-use BrianFaust\Reportable\HasReports;
+use Artisanry\Reportable\HasReports;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -78,7 +78,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -87,4 +87,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)
