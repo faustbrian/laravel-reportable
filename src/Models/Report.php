@@ -32,7 +32,7 @@ class Report extends Model
     {
         return $query->doesntHave('conclusion');
     }
-    
+
     public function reporter(): HasOne
     {
         return $this->hasOne(User::class, 'id', 'reporter_id');
