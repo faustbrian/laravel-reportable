@@ -70,6 +70,11 @@ $report->judge(); // Just a shortcut for $report->conclusion->judge
 Report::allJudges();
 ```
 
+#### Get unjudged reports (those without conclusions)
+``` php
+Report::unjudged(); // returns query builder.
+```
+
 ## Testing
 
 ``` bash
