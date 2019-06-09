@@ -28,7 +28,12 @@ class Report extends Model
         return $this->morphTo();
     }
 
-    public function reporter()
+    public function scopeUnjudged(Builder $query) : Builder
+    {
+        return $query->doesntHave('conclusion');
+    }
+
+    public function reporter(): HasOne
     {
         return $this->hasOne(User::class, 'id', 'reporter_id');
     }

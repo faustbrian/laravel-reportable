@@ -50,7 +50,7 @@ $post->report([
 ``` php
 $report->conclude([
     'conclusion' => 'Your report was valid. Thanks! We\'ve taken action and removed the entry.',
-    'action_taken' => 'Record has been deleted.' // This is optional but can be useful to see what happend to the record
+    'action_taken' => 'Record has been deleted.', // This is optional but can be useful to see what happend to the record
     'meta' => ['some more optional data, can be notes or something'],
 ], $user);
 ```
@@ -68,6 +68,11 @@ $report->judge(); // Just a shortcut for $report->conclusion->judge
 #### Get an array with all Judges that have ever "judged" something
 ``` php
 Report::allJudges();
+```
+
+#### Get unjudged reports (those without conclusions)
+``` php
+Report::unjudged(); // returns query builder.
 ```
 
 ## Testing
