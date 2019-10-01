@@ -75,6 +75,11 @@ Report::allJudges();
 Report::unjudged(); // returns query builder.
 ```
 
+#### Changing the user reporter model
+``` php
+Set your user model in the config('auth.providers.users.model');
+```
+
 ## Testing
 
 ``` bash
