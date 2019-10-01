@@ -36,7 +36,7 @@ class Report extends Model
 
     public function reporter(): HasOne
     {
-        return $this->hasOne(User::class, 'id', 'reporter_id');
+        return $this->hasOne(config('auth.providers.users.model'), 'id', 'reporter_id');
     }
 
     public function conclusion(): HasOne
